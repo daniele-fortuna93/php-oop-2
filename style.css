@@ -1,0 +1,17 @@
+h1{
+    color: blue;
+}
+h2{
+    color: green;
+}
+ol li{
+    color: rgb(100, 100, 100);
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+ul li{
+    color: rgb(4, 83, 202);
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+}

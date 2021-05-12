@@ -3,12 +3,14 @@ class Prodotto{
     // attributi
     public $nome;
     public $prezzo;
+    public $tipo;
 
     // construct
-    public function __construct(string $_nome, int $_prezzo)
+    public function __construct(string $_nome, int $_prezzo, string $_tipo)
     {
         $this->nome = $_nome;
         $this->prezzo = $_prezzo;
+        $this->tipo = $_tipo;
     }
 }
 
@@ -20,8 +22,7 @@ class Food extends Prodotto{
     // construct
     public function __construct(string $_nome, int $_prezzo, string $_tipo, int $_scadenza)
     {
-        parent::__construct($_nome, $_prezzo);
-        $this->tipo = $_tipo;
+        parent::__construct($_nome, $_prezzo, $_tipo); 
         $this->scadenza = $_scadenza;
     }
     
@@ -35,8 +36,7 @@ class Tech extends Prodotto{
     // construct
     public function __construct(string $_nome, int $_prezzo, string $_tipo, string $_marca)
     {
-        parent::__construct($_nome, $_prezzo);
-        $this->tipo = $_tipo;
+        parent::__construct($_nome, $_prezzo, $_tipo);
         $this->marca = $_marca;
     }
 }
@@ -72,6 +72,7 @@ $products = [
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Prodotti</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Prodotti</h1>
